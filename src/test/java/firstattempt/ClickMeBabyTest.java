@@ -23,14 +23,12 @@ public class ClickMeBabyTest {
     @Test
     public void clickmebaby() {
         driver.get("https://the-internet.herokuapp.com/");
-
-        sleep(10);
-
-        driver.manage().window().setSize(new Dimension(1660, 990));
-        driver.findElement(By.linkText("Click me baby")).click();
-        driver.findElement(By.id("clickMe")).click();
-
-        Assert.assertEquals(driver.findElement(By.id("clicks")).getText(), "1");
+        sleep(2);
+        driver.manage().window().fullscreen();
+        sleep(2);
+        driver.findElement(By.linkText("Checkboxes")).click();
+        sleep(2);
+        Assert.assertEquals(driver.findElement(By.tagName("h3")).getText(), "Checkboxes");
     }
 
     private void sleep(int seconds) {
@@ -44,6 +42,7 @@ public class ClickMeBabyTest {
     @BeforeTest
     public void setUp() throws MalformedURLException {
         //driver = new RemoteWebDriver(new URL("http://10.245.197.20:4444/wd/hub"), getDefaultChromeOptions());
+        System.setProperty("webdriver.chrome.driver", "C:/Users/Eliška/Downloads/chromedriver_win32/chromedriver.exe");
         driver = new ChromeDriver();
     }
 

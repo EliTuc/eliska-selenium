@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="eliska-selenium" target="1.5" />
+      <module name="eliska-selenium" target="6" />
     </bytecodeTargetLevel>
   </component>
 </project>
